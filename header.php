@@ -10,20 +10,24 @@
 <body <?php body_class(); ?> >
 <p>Este é um paragrafo</p>
 <header>
-    <div class="barra-topo">
-        <div class="redes-sociais">
+    <div class="barra-topo container">
+    <div class="row">
+        <div class="redes-sociais col-md-4">
             Redes Sociais
         </div>
-        <div class="pesquisa">
+        <div class="pesquisa col-md-8">
             Pesquisa
         </div>
+        </div>
     </div>
-    <div class="area-menu">
-        <div class="logo">
+    <div class="area-menu container">
+        <div class="row">
+        <div class="logo col-md-3">
             Logo
         </div>
-        <div class="menu">
-            Menu
+        <div class="menu-principal col-md-9">
+            <?php wp_nav_menu( array('theme_location' => 'meu_menu_principal' ) ); ?>
+        </div>
         </div>
     </div>
 </header>

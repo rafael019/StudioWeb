@@ -1,4 +1,13 @@
-.barra-topo{
-    background: #dc0000;
-    height: 70px;
+.redes-sociais {
+    background: green;
+    height: 30px;
+}
+
+.pesquisa {
+    background: yellow;
+    height: 30px;
+}
+
+.menu-principal ul li, .menu-rodape ul li {
+    display: inline;
 }
