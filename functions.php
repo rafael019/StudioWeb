@@ -20,5 +20,13 @@ register_nav_menus(
     )
 );
 
+// Suportes para Tema
+
+// Customizar Fundo
+add_theme_support('custom-background');
+// Customizar Cabeçalho
+add_theme_support('custom-header');
+//Suporte a Thumbnail
+add_theme_support('post-thumbnails');
 
 ?>

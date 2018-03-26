@@ -8,7 +8,6 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
-<p>Este é um paragrafo</p>
 <header>
     <div class="barra-topo container">
     <div class="row">

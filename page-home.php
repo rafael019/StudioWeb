@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+// Template Name: Home
+get_header(); ?>
 
 <div class="conteudo">
     <main>
