@@ -4,9 +4,14 @@ get_header(); ?>
 
 <div class="conteudo">
     <main>
-        <section class="slide container">Slide</section>
-        <section class="servicos container">Servicos</section>
-        <section class="meio container">
+        <section class="slide">
+         <div class="container">Slide</div>
+         </section>
+        <section class="servicos">
+        <div class="container">Servicos</div>
+        </section>
+        <section class="meio">
+        <div class="container">
             <div class="row">
                 <aside class="barra-lateral col-md-3">Barra Lateral</aside>
                 <div class="noticias col-md-9">
@@ -27,8 +32,12 @@ get_header(); ?>
                     
                 </div>
             </div>
+            </div>
         </section>
-        <section class="mapa container">Mapa</section>
+        <section class="mapa">
+        <div class="container">
+        Mapa
+        </div></section>
     </main>
 </div>
 
