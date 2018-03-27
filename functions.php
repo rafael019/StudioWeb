@@ -33,4 +33,31 @@ add_theme_support('post-thumbnails');
 // Suporte a Formato de post
 add_theme_support('post-formats',array('video', 'image'));
 
+// Registrando Sidebar
+if (function_exists('register_sidebar')){
+    register_sidebar(
+        array(
+            'name' => 'Barra Lateral 1',
+            'id'   => 'sidebar-1',
+            'description' => 'Barra lateral da página home',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget_titulo">',
+            'after_title' => '</h2>',
+        )
+    );
+     register_sidebar(
+        array(
+            'name' => 'Barra Lateral 2',
+            'id'   => 'sidebar-2',
+            'description' => 'Barra lateral da página blog',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget_titulo">',
+            'after_title' => '</h2>',
+        )
+    );
+}
+
+
 ?>

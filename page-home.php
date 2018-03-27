@@ -13,23 +13,22 @@ get_header(); ?>
         <section class="meio">
         <div class="container">
             <div class="row">
-                <aside class="barra-lateral col-md-3">Barra Lateral</aside>
+                <aside class="barra-lateral col-md-3">
+                    <?php get_sidebar('home'); ?>
+                </aside>
                 <div class="noticias col-md-9">
-                    <?php
-                        //Se houver algum post
-                        if(have_posts()) : 
-                            //Enquanto houver algum post, chame o post de determinada maneira
-                            while(have_posts()) : the_post()
-                    ?>   
-                        <h1><?php the_title(); ?></h1>
-                        <p>Publicado em: <?php echo get_the_date();?> por <?php the_author(); ?></p>
-                        <p>Categorias: <?php the_category(' ')?></p>
-                        <p><?php the_tags('Tags: ',', '); ?></p>
-                        <p><?php the_content(); ?></p>
-                    <?php endwhile; else: ?>
-                        <p>Não tem nada ainda pra mostrar</p>
-                    <?php endif; ?>
-                    
+                   <div class="row">
+                        <?php $destaque = new WP_Query('post_type=post&posts_per_page=1&cat=13');
+
+                            if( $destaque->have_posts()): while($destaque->have_posts()): $destaque->the_post(); ?>
+
+                                    <div class="col-md-12">
+                                        <?php get_template_part('content','destaque'); ?>
+                                    </div>           
+
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+
+                   </div>
                 </div>
             </div>
             </div>
