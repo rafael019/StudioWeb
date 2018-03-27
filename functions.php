@@ -33,6 +33,9 @@ add_theme_support('post-thumbnails');
 // Suporte a Formato de post
 add_theme_support('post-formats',array('video', 'image'));
 
+// Suporte a Linguágem HTML5
+add_theme_support('html5', array('search-form'));
+
 // Registrando Sidebar
 if (function_exists('register_sidebar')){
     register_sidebar(

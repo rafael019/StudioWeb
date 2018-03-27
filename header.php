@@ -12,11 +12,11 @@
     <div class="barra-topo">
     <div class="container">
     <div class="row">
-        <div class="redes-sociais col-md-4">
+        <div class="redes-sociais col-md-10">
             Redes Sociais
         </div>
-        <div class="pesquisa col-md-8 text-right">
-            Pesquisa
+        <div class="pesquisa col-md-2 text-right">
+            <?php get_search_form(); ?>
         </div>
         </div>
     </div>

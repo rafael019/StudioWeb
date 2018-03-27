@@ -31,8 +31,8 @@ get_header(); ?>
                          <?php 
                             $args =  array(
                                 'post_type' => 'post',
-                                'post_per_page' => 2,
-                                'category__not_in' => 13,
+                                'posts_per_page' => 2,
+                                'category__not_in' => 13
                                 //'offset' => 1, Pula o primeiro post
                             );
                             
