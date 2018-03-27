@@ -28,15 +28,34 @@ get_header(); ?>
 
                         <?php endwhile; wp_reset_postdata(); endif; ?>
 
+                         <?php 
+                            $args =  array(
+                                'post_type' => 'post',
+                                'post_per_page' => 2,
+                                'category__not_in' => 13,
+                                //'offset' => 1, Pula o primeiro post
+                            );
+                            
+                            $secundaria = new WP_Query($args);
+
+                                if( $secundaria->have_posts()): while($secundaria->have_posts()): $secundaria->the_post(); ?>
+
+                                        <div class="col-md-6">
+                                            <?php get_template_part('content','secundaria'); ?>
+                                        </div>           
+
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+
                    </div>
                 </div>
             </div>
             </div>
         </section>
         <section class="mapa">
-        <div class="container">
-        Mapa
-        </div></section>
+            <div class="container">
+                Mapa
+            </div>
+        </section>
     </main>
 </div>
 
