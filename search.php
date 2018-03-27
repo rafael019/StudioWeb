@@ -12,6 +12,14 @@
                             endif;
 
                         endwhile;
+
+                        the_posts_pagination(
+                            array(
+                                'prev_text' => 'Anterior',
+                                'next_text' => 'Próximo'
+                            )
+                        );
+
                         ?>
                     </div>
                     <div class="col-md-3 barra-lateral">

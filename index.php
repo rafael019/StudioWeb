@@ -18,7 +18,14 @@
                     <!-- Busca os Formatos de Post -->
                     <?php get_template_part('content', get_post_format()); ?>
 
-                    <?php endwhile; else: ?>
+                    <?php endwhile; ?>
+                        <div class="paginacao text-left">
+                            <?php next_posts_link('<< Mais Antigos');?>
+                        </div>
+                        <div class="paginacao text-right">
+                            <?php previous_posts_link('Mais Recentes >>');?>
+                        </div>
+                    <?php else: ?>
                         <p>Não tem nada ainda pra mostrar</p>
                     <?php endif; ?>
                
@@ -29,7 +36,6 @@
             </div>
             </div>
         </section>
-        <section class="mapa container">Mapa</section>
     </main>
 </div>
 
