@@ -5,7 +5,9 @@ get_header(); ?>
 <div class="conteudo">
     <main>
         <section class="slide">
-         <div class="container">Slide</div>
+         <div class="container">
+            <?php motoPressSlider('home-slider') ?>
+         </div>
          </section>
         <section class="servicos">
         <div class="container">Servicos</div>
@@ -13,10 +15,10 @@ get_header(); ?>
         <section class="meio">
         <div class="container">
             <div class="row">
-                <aside class="barra-lateral col-md-3">
+                <aside class="barra-lateral col-md-4">
                     <?php get_sidebar('home'); ?>
                 </aside>
-                <div class="noticias col-md-9">
+                <div class="noticias col-md-8">
                    <div class="row">
                         <?php $destaque = new WP_Query('post_type=post&posts_per_page=1&cat=13');
 
@@ -52,9 +54,10 @@ get_header(); ?>
             </div>
         </section>
         <section class="mapa">
-            <div class="container">
-                Mapa
-            </div>
+                <div class="ondeestamos">
+                    <h1>Onde Estamos?</h1>
+                </div>
+                <?php gmwd_map( 1, 1); ?>
         </section>
     </main>
 </div>

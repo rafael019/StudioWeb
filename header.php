@@ -13,10 +13,14 @@
     <div class="barra-topo">
     <div class="container">
     <div class="row">
-        <div class="redes-sociais col-md-10">
-            Redes Sociais
+        <div class="redes-sociais col-md-10 col-sm-10 col-xs-6">
+            <?php
+                if(is_active_sidebar('redes-sociais')){
+                    dynamic_sidebar( 'redes-sociais' );
+                }
+            ?>
         </div>
-        <div class="pesquisa col-md-2 text-right">
+        <div class="pesquisa col-md-2 col-sm-2 col-xs-6 text-right">
             <?php get_search_form(); ?>
         </div>
         </div>

@@ -16,7 +16,7 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 // Função para carregar estilos e ecripts
 function carrega_scripts(){
 
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all');
+    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all');
     // Função carrega scripts JS
     wp_enqueue_script('bootstrap-js' , get_template_directory_uri(). '/js/bootstrap.min.js', array('jquery'), '3.3.7', true);
     // Função que carrega estilos
@@ -67,6 +67,18 @@ if (function_exists('register_sidebar')){
             'name' => 'Barra Lateral 2',
             'id'   => 'sidebar-2',
             'description' => 'Barra lateral da página blog',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget_titulo">',
+            'after_title' => '</h2>',
+        )
+    );
+
+     register_sidebar(
+        array(
+            'name' => 'Redes Sociais',
+            'id'   => 'redes-sociais',
+            'description' => 'Widget para redes sociais',
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h2 class="widget_titulo">',
