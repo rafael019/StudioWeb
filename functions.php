@@ -1,5 +1,18 @@
 <?php
 
+// Funções para Limpar o Header
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'start_post_rel_link', 10, 0 );
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+
 // Função para carregar estilos e ecripts
 function carrega_scripts(){
 
@@ -62,5 +75,19 @@ if (function_exists('register_sidebar')){
     );
 }
 
+
+// Alterar o numero de itens por página no blog
+function num_itens_blog( $query ){
+    if( is_admin() || ! $query->is_main_query() )
+    return;
+
+    // Pagina Blog
+    if( is_home() ){
+        $query->set('posts_per_page', 2 );
+        return;
+    }
+}
+
+add_action('pre_get_posts', 'num_itens_blog', 1 );
 
 ?>

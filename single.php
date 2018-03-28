@@ -1,3 +1,4 @@
+<!-- Pagina interna dos posts do blog -->
 <?php get_header(); ?>
 <div id="primery">
     <main id="main">
