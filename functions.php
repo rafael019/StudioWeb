@@ -1,5 +1,8 @@
 <?php
 
+// Incluindo arquivo costumizer
+require get_template_directory().'/inc/customizer.php';
+
 // Funções para Limpar o Header
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -45,6 +48,11 @@ add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
 // Suporte a Formato de post
 add_theme_support('post-formats',array('video', 'image'));
+// Suporte ao logo customizado
+add_theme_support('custom-logo',array(
+    'width'  => '200', // Largura do Logo
+    'height' => '110', // Altura do Logo
+));
 
 // Suporte a Linguágem HTML5
 add_theme_support('html5', array('search-form'));
@@ -102,4 +110,14 @@ function num_itens_blog( $query ){
 
 add_action('pre_get_posts', 'num_itens_blog', 1 );
 
-?>
+
+// Shortcodes para mostrar telefone na página de contato
+function mostra_telefone(){
+    // Função para verificar se está acessando celular
+    if(wp_is_mobile()){
+        $resultado ='<div class="telefone"><p>Ligue agora: <a href="tel:1535322163">(15)3532-2163 </a></p></div>';
+    }
+    return $resultado;
+}
+
+add_shortcode('meutelefone', 'mostra_telefone');

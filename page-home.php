@@ -10,7 +10,43 @@ get_header(); ?>
          </div>
          </section>
         <section class="servicos">
-        <div class="container">Servicos</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 .col-sm-4 .col-xs-12">
+                    <div class="servicos-item">
+                        <div class="servicos-img">
+                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod('set_servicos1')); ?>" alt="">
+                        </div>
+                        <div class="servicos-desc">
+                            <h2><?php echo get_theme_mod('set_servicos1_titulo') ?></h2>
+                            <p><?php echo get_theme_mod('set_servicos1_desc') ?></p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-4 .col-sm-4 .col-xs-12">
+                    <div class="servicos-item">
+                        <div class="servicos-img">
+                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod('set_servicos2')); ?>" alt="">
+                        </div>
+                        <div class="servicos-desc">
+                            <h2><?php echo get_theme_mod('set_servicos2_titulo') ?></h2>
+                            <p><?php echo get_theme_mod('set_servicos2_desc') ?></p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-4 .col-sm-4 .col-xs-12">
+                    <div class="servicos-item">
+                        <div class="servicos-img">
+                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod('set_servicos3')); ?>" alt="">
+                        </div>
+                        <div class="servicos-desc">
+                            <h2><?php echo get_theme_mod('set_servicos3_titulo') ?></h2>
+                            <p><?php echo get_theme_mod('set_servicos3_desc') ?></p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
         </section>
         <section class="meio">
         <div class="container">
