@@ -1,4 +1,4 @@
-# Tema_StudioWeb
+# Tema_StudioWeb 1.0
 Theme Worpdress criado no Curso completo de criação de temas responsivos da Udemy
 
 
