@@ -1,7 +1,7 @@
 <?php
 
     function customizar_tema($wp_customize){
-        
+
         //Seção copyright
         $wp_customize->add_section('sec_copyright', array(
             'title' => 'Copyright', // Nome da Aba
@@ -39,7 +39,7 @@
                 'section'     => 'sec_servicos',
                 'settings'    => 'set_servicos1'
             )));
-        
+
         // Titulo
         $wp_customize->add_setting('set_servicos1_titulo', array(
             'default' => '',
@@ -133,9 +133,7 @@
             'settings'    => 'set_servicos3_desc',
             'type'        => 'textarea'
         ));
-        
+
     }
 
 add_action('customize_register', 'customizar_tema');
-
-?>
