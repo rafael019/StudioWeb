@@ -52,7 +52,7 @@ exports.optimizeImages = optimizeImages;
 // Iniciar o Browser e faz o Live Reload
 function browser() {
   browserSync.init({
-    proxy: "http://localhost/wpFramework/",
+    proxy: "http://localhost/studioweb/",
   });
 }
 exports.browser = browser;
