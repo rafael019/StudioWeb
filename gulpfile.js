@@ -1,6 +1,6 @@
 const gulp = require("gulp");
-const gulpSass = require("gulp-sass")(require("node-sass"));
-const nodeSass = require("node-sass");
+const gulpSass = require("gulp-sass")(require("sass"));
+const nodeSass = require("sass");
 const browserSync = require("browser-sync").create();
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
@@ -52,7 +52,7 @@ exports.optimizeImages = optimizeImages;
 // Iniciar o Browser e faz o Live Reload
 function browser() {
   browserSync.init({
-    proxy: "http://localhost/studioweb/",
+    proxy: "http://studioweb.test",
   });
 }
 exports.browser = browser;
